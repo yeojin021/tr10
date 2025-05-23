@@ -1,0 +1,100 @@
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+.default {
+    padding: 120px 0;
+}
+
+.default .title {
+    max-width: 1290px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.default .title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.default .title h3 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.default .title p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.wheel {
+    font-size: 12px;
+    color: var(--WC);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.wheel::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--WC);
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+    animation: scroll 2s infinite;
+}
+
+
+.wheel::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+    width: 1px;
+    height: 80px;
+    background: var(--WC);
+    opacity: 0.5;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 80px);
+    }
+
+    100% {
+        transform: translate(-50%, 80px) scale(12);
+        opacity: 0.1;
+    }
+}
+
+.default_btn {
+    display: inline-flex;
+    background: #333;
+    align-items: center;
+    padding: 16px 40px;
+    border-radius: 32px;
+    color: #fff;
+}
